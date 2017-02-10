@@ -1,0 +1,14 @@
+<div *ngIf="modalIsVisible">
+  <app-new-pop (closeForm)="closeModal()"></app-new-pop>
+</div>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    {{pageTitle}}
+  </div>
+  <div class="panel-body panel-body-center">
+    <ng2-smart-table [settings]="settings" (create)="openModal(data)"></ng2-smart-table>
+  </div>
+  <div class="panel-footer">
+    <button md-raised-button>New Period Of Performance</button>
+  </div>
+</div>
